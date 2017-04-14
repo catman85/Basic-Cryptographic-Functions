@@ -28,7 +28,7 @@ int main(){
 		i++;
 	}
 	int msgsize=i;
-    //καθαρισμός τoυ msg
+
     cleanup(msg);
 	//converting msg to an integer array
 	int imsg[40];
@@ -59,7 +59,6 @@ int main(){
 	int mul=mulInverse(a,26);
 	for(i=0;i<msgsize;i++){
             int reg=(icipher[i]-b);
-            //κυκλος για τις αρνητικές τιμές!!!!!!
             if(reg<0){
                reg=26+reg;
             }
