@@ -5,7 +5,7 @@
 
 static unsigned char mode;
 
-//έξοδος προγράμματος στο 'S mode'
+
 void printBin(int C)
 {
 	int i = 0;
@@ -21,7 +21,7 @@ void printBin(int C)
 	puts("");
 }
 
-//έξοδος προγράμματος
+
 void printOut(int C)
 {
 	printf("%d",(C>>0)&1);
