@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int b[]={1,2,4,9,20,38}; //uperauxousa (eykolh lysh) (private key)
+int b[]={1,2,4,9,20,38}; //(private key)
 int B[6][3]; //its b but sorted like a
              //first column private key values, second column order, third column knapsack (0 or 1)
-int a[6][2];//={3,5,1,9,0,60};//auxousa (duskolh lush) (public key)
+int a[6][2];//={3,5,1,9,0,60};//(public key)
 			//a[i][0] value of public key | a[i][1] index before sorting
 int m=105; //bigger than the sum
 int w=31; //gcd(w,m)=1
@@ -156,7 +156,7 @@ void decrypt(){
   }
   puts("\n");
 }
-//creates our private key B but sorted like a (our public key)
+//creates our (our public key)
 //output B[][0] is 4 38 1 2 9 20
 void createB(){
 	int j,i;
@@ -196,7 +196,6 @@ void recoverState(){
 //Knapsack(P[i])
 void Knapsack(int S){
     // S must be bigger than the max value of b but not bigger than 2*Max
-	//to b 8elei anadiataksh (na einai opws a')
 	//b private key
 	//a public key
     //the B array is our private key sorted like a
@@ -230,7 +229,7 @@ void Knapsack(int S){
 }
 
 
-//C and P values are correct
+
 int main(){
 
 printPlainText();
