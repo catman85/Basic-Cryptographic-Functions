@@ -15,7 +15,7 @@ int main(){
 	scanf("%40s",key);
 
 
-	//κάνουμε το msg κεφαλαία
+	//capitalizing
 	i=0;
 	while(msg[i]!='\0'){
 		if(msg[i]>=97 && msg[i]<=122){
@@ -26,7 +26,7 @@ int main(){
 	int msgsize=i;
 
 
-	//κάνουμε το key κεφαλαία
+	//capitalizing key
 	i=0;
 	while(key[i]!='\0'){
 		if(key[i]>=97 && key[i]<=122){
@@ -39,12 +39,12 @@ int main(){
 	//making sure that keysize<=msgsize
 	if(keysize>msgsize){
 		//for(i=msgsize;i<40;i++)s
-			key[msgsize]='\0';//χαρακτήρας τερματισμού
-		//
+			key[msgsize]='\0';
+		
 		//keysize=msgsize;
 	}
 
-	//Μετατροπή μυνήματος και κλειδιού σε αριθμούς
+	//converting msg and key to integers
 	int imsg[40],ikey[40];
 
 	for(i=0;i<msgsize;i++){
@@ -56,7 +56,7 @@ int main(){
 
 
 
-	//επανάληψη του key ώστε να ταιριάζειμε το msg
+	//repeating the key so it fits the msg
 	if(keysize<msgsize){
 		for(i=0;i<msgsize-keysize;i++){
 			ikey[keysize+i]=ikey[i];
@@ -68,22 +68,19 @@ int main(){
 	//Encryption
 	for(i=0;i<msgsize;i++){
 			cipher[i]=ikey[i]+imsg[i]+65;
-
-			//οι χαρακτήρες που μας
-			//ενδιαφέρουν απο 65 μέχρι 90
 			if(cipher[i]>90){
 				cipher[i]=(cipher[i]%90)+65;
 			}
 	}
 
-	//καθαρισμός του cipher
+	//cleanup cipher
 	for(i=0;i<sizeof(cipher);i++){
 		if(cipher[i]<65 || cipher[i]>90){
 			cipher[i]='\0';
 		}
 	}
 
-	//καθαρισμός του κλειδιού
+	//key cleanup
 	for(i=0;i<sizeof(key);i++){
 		if(key[i]<65 || key[i]>90){
 			key[i]='\0';
