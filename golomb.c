@@ -7,8 +7,6 @@ void cleanup(char *str);
 void count(); 
 void paths(); 
 int iseven(int d);
-
-//αυτοσυσχέτηση
 int autoc(int d);
 
 void convert(); // {0,1} -> {-1,1}
