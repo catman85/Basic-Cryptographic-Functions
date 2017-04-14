@@ -25,7 +25,7 @@ int greatestCommonDivisor(int a, int b)
     return b;
 }
 
-//οδηγίες χρήσης
+
 void usage(void){
 	printf("Type 2 integers with a space between them and hit Enter\n");
 }
@@ -34,10 +34,10 @@ int main(int argc, char *argv[])
 {
 	int num1,num2;
 
-	if(argc!=3){ 							  //αν δέν έχει διοχετευθεί πληροφορία στην main
-		while(scanf("%d%d",&num1,&num2)!=2){ //ο χρήστης πρέπει να δώσει τους ακεραίους
-			usage();				        //οδηγίες χρήσης
-			while(getchar()!='\n');        //καθαρισμός πληκτρολογίου
+	if(argc!=3){ 							  
+		while(scanf("%d%d",&num1,&num2)!=2){ 
+			usage();				       
+			while(getchar()!='\n');       
 		}
 	}else{
 		num1=atoi(argv[1]);
@@ -45,6 +45,6 @@ int main(int argc, char *argv[])
 	}
     int gcd = greatestCommonDivisor(num1, num2);
     printf("The GCD of %d and %d is %d\n", num1, num2, gcd);
-    getchar();//ο χρήστης παταέι Enter για να κλείσει το πρόγραμμα
+    getchar();
     return 0;
 }
