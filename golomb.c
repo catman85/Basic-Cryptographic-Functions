@@ -3,9 +3,9 @@
 #include <string.h>
 #include <math.h>
 
-void cleanup(char *str);//καθαρισμός εισόδου
-void count(); //καταμέτρηση 1 0
-void paths(); //διαδρομές
+void cleanup(char *str);
+void count(); 
+void paths(); 
 int iseven(int d);
 
 //αυτοσυσχέτηση
@@ -17,14 +17,14 @@ float m(int d);
 
 
 int n0=0,n1=0;
-char *input; // εισοδος 0101010101
+char *input; 
 int conv[]={}; // {-1,1}
 
-#define SIZEOF(X) (sizeof(X)/sizeof((X)[0])) //υπολογίζει μέγεθος πίνακα
+#define SIZEOF(X) (sizeof(X)/sizeof((X)[0])) 
 
 int main(int argc, char *argv[]) {
 
-	//δεχόμαστε είσοδο απο το command prompt
+	
     if (argc < 1)
         return 0;
 
@@ -47,19 +47,19 @@ int main(int argc, char *argv[]) {
     //--------
 
 
-    //καθαρισμός input
+  
     cleanup(input);
     printf("Input: %s\n", input);
 
-    //έλεγος πλήθους 1 0
+   
 	count();
 	printf("Frequency difference: %d Polwsh (closer to 0 is better): %lf\n",abs(n0-n1),polwsh());
 
 
-    //έλεγχος διαδρομών
+    
     paths();
 
-	//έλεγχος αυτοσυσχέτισης
+	
 	convert();
 	puts("");
 
@@ -163,9 +163,9 @@ int autoc(int d){
     //https://en.wikipedia.org/wiki/Autocorrelation
 	int buffer=0;
 	int n=n0+n1;
-	//Τ = περίοδος = μήκος ακολουθίας
+	
 	int j;
-	for(j=0;j<n-d;j++){//υπαρχει καποιο προβλημα με τα d
+	for(j=0;j<n-d;j++){
 		buffer+=(conv[j])*(conv[j+d]);
 	}
 	return buffer;
