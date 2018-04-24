@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 
 int greatestCommonDivisor(int a, int b)
@@ -33,12 +35,10 @@ void usage(void){
 int main(int argc, char *argv[])
 {
 	int num1,num2;
-
 	if(argc!=3){ 							  
-		while(scanf("%d%d",&num1,&num2)!=2){ 
-			usage();				       
-			while(getchar()!='\n');       
-		}
+		do{
+			usage();
+		}while(scanf("%d%d",&num1,&num2)!=2);
 	}else{
 		num1=atoi(argv[1]);
 		num2=atoi(argv[2]);

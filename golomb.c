@@ -3,9 +3,12 @@
 #include <string.h>
 #include <math.h>
 
+//compile command: gcc golomb.c -lm -o golomb
+
 void cleanup(char *str);
 void count(); 
 void paths(); 
+void usage();
 int iseven(int d);
 int autoc(int d);
 
@@ -23,8 +26,10 @@ int conv[]={}; // {-1,1}
 int main(int argc, char *argv[]) {
 
 	
-    if (argc < 1)
+    if (argc <= 1){
+	usage();
         return 0;
+	}
 
     int i;
     int strsize = 0;
@@ -47,7 +52,7 @@ int main(int argc, char *argv[]) {
 
   
     cleanup(input);
-    printf("Input: %s\n", input);
+    printf("Repeating Patterns: %s\n", input);
 
    
 	count();
@@ -55,7 +60,7 @@ int main(int argc, char *argv[]) {
 
 
     
-    paths();
+	paths();
 
 	
 	convert();
@@ -195,6 +200,8 @@ float polwsh(){
 	return pow(n0-n1,2)/n;// ^ == bit XOR
 }
 
-
-
+void usage(){
+	printf("Execute the this program and pass a number as an argument.\n");
+	printf("You will see stats about how random this number is.\n");
+}
 

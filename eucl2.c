@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 
 int efkl2(int a, int b, int *x, int *y)
@@ -30,10 +32,11 @@ int main(int argc, char *argv[])
 {
     int x, y, a, b;
      if(argc!=3){
-                while(scanf("%d%d",&a, &b)!=2){
-                        usage(); 	//οδηγίες χρήσης
-                        while(getchar()!='\n');
-                }
+		do{
+			usage();
+
+		}while(scanf("%d%d",&a, &b)!=2);
+
      }else{
                 a=atoi(argv[1]);
                 b=atoi(argv[2]);

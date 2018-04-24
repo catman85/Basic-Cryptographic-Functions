@@ -3,7 +3,7 @@
 
 int main(){
 	int i;
-
+	printf("Use only Characters... \n");
 	printf("Enter Message: \n");
 	char msg[40];//maximum capacity
 	scanf("%40s",msg);
@@ -94,7 +94,7 @@ int main(){
 	printf("%s\n\n",key);
 
 	puts("Encrypted Message:");
-	printf("%s",cipher);
+	printf("%s\n\n",cipher);
 
     getchar();
 	return 0;

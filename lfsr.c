@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <assert.h>
 
 #define IS_TAP(x)	((x==31)||(x==6)||(x==4)||(x==2)||(x==1)||(x==0))
@@ -55,7 +57,7 @@ void usage(){
 	printf("First argument determines how many random bits you want.\n");
 	printf("Second argument is either nothing or slow mode 'S'.\n");
 	printf("In slow mode the numbers inside the parenthesis are registers (taps).\n");
-    printf("In slow mode the last number in every line is the output.\n");
+    	printf("In slow mode the last number in every line is the output.\n");
 	printf("Example: lfsr.exe 500 S \n");
 	puts("/-------------/");
 }
@@ -63,7 +65,7 @@ void usage(){
 int main(int argc,char* argv[])
 {
 	assert(argc>1);
-    usage();
+    	usage();
 
 	int i;
 	int limit = atoi(argv[1]);
