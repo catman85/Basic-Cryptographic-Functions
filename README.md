@@ -2,18 +2,20 @@
 
 Some Crypto scripts written in C for educational purposes.
 
-~Includes: 
+To execute them, type: "gcc gcd.c -lm -o gcd && ./gcd"
 
-Greatest Common Divisor,
+---Includes: 
 
-Euclideian Greatest Common Divisor,
+~Greatest Common Divisor,
 
-Golomb's randomness Criteria, 
+~Euclideian Greatest Common Divisor,
 
-Linear Feedback Shift Register,
+~Golomb's randomness Criteria, 
 
-Linear Cryptography, 
+~Linear Feedback Shift Register,
 
-Merkle Hellman Knapsack CryptoSystem, 
+~Linear Cryptography, 
 
-Vigenère cipher.
+~Merkle Hellman Knapsack CryptoSystem, 
+
+~Vigenère cipher.
